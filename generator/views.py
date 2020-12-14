@@ -27,6 +27,7 @@ def password(request):
 	thepassword = ''
 	length = int(request.GET.get('length',10))
 
+	#thepassword = ("".join(random.suffle(characters)[0:length]))
 
 	for x in range(length):
 		thepassword += random.choice(characters)
