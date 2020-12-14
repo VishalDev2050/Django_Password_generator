@@ -13,11 +13,15 @@ def password(request):
 
 	
 	characters = list('abcdefghijklmnopqrstuvwxyz')
+	#characters = list(string.ascii_lowercase)
+	#characters = list(string.ascii_uppercase)
+	#characters = list(string.punctuation)
+	#characters.extend(list(string.digits))
 
 	if request.GET.get('uppercase'):
 		characters.extend(list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))
 	if request.GET.get('numbers'):
-		characters.extend(list('0123456789'))
+		characters.extend(list('0123456789'))		
 	if request.GET.get('special'):
 		characters.extend(list('!@#$%^&*()'))
 	thepassword = ''
